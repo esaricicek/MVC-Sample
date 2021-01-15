@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "Test2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Test2</h2>
+
+@{
+    string name = "Emrah";
+    string degisken = "<input type='text'  value='deneme'/> ";
+
+    for (int i = 0; i < 10; i++)
+    {
+        // @i<br />
+    }
+
+    var d = new short[] { 1, 2, 3, 4, 5, 6 };
+
+    foreach (var item in d)
+    {
+        @*if (item % 2 == 0)
+            {
+                @item
+                <br />
+            }*@
+    }
+
+    if (IsPost)
+    {
+        name = "değişti";
+    }
+
+}
+<br />
+@degisken
+
+@Html.Raw(degisken)
+
+@*@using (Html.BeginForm())
+{
+    <input type="text" name="txtName" value="@name" /><br />
+    <input type="text" name="txtName" value="Deneme" />
+
+    <input type="submit" value="Çalıştır" />
+
+}*@
+
+
